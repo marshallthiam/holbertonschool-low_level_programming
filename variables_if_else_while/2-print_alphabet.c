@@ -1,18 +1,20 @@
 #include <stdio.h>
 
+#include <ctype.h>
 /**
- * main - Prints the alphabet in lowercase.
- *
- * Return: Always 0.
+ * main - main block
+ * Description: Get a random number and print the number
+ * positive,negative or zero
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	char letter;
-
-	for (letter = 'a'; letter <= 'z'; letter++)
-		putchar(letter);
-
-	putchar('\n');
-
-	return (0);
+int alphabet;
+for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+{
+alphabet = tolower(alphabet);
+putchar(alphabet);
+}
+putchar('\n');
+return (0);
 }
