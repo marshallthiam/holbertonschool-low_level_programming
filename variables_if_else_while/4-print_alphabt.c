@@ -1,15 +1,24 @@
 #include <stdio.h>
+
+#include <ctype.h>
+/**
+ * main - main block
+ * Description: Get a random number and print the number
+ * positive,negative or zero
+ * Return: Always 0 (success)
+ */
 int main(void)
 {
-	char letter;
+	int letters;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
+	for (letters = 'a'; letters <= 'z'; letters++)
 	{
-		if (letter != 'e' && letter != 'q')
-			putchar(letter);
+		if (letters  == 'q' || letters == 'e')
+		{
+			continue;
+		}
+		putchar(letters);
 	}
-
 	putchar('\n');
-
 	return (0);
 }
