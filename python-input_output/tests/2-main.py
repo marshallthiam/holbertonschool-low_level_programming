@@ -1,11 +1,5 @@
 #!/usr/bin/python3
-Rectangle = __import__('2-rectangle').Rectangle
+append_write = __import__('4-append_write').append_write
 
-my_rectangle = Rectangle(2, 4)
-print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
-
-print("--")
-
-my_rectangle.width = 10
-my_rectangle.height = 3
-print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+nb_characters_added = append_write("file_append.txt", "School is so cool!\n")
+print(nb_characters_added)
