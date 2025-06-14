@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-Rectangle = __import__('1-rectangle').Rectangle
+write_file = __import__('3-write_file').write_file
 
-my_rectangle = Rectangle(2, 4)
-print(my_rectangle.__dict__)
-
-my_rectangle.width = 10
-my_rectangle.height = 3
-print(my_rectangle.__dict__)
+nb_characters = write_file("my_first_file.txt", "School is so cool!\n")
+print(nb_characters)
