@@ -1,26 +1,25 @@
 #!/usr/bin/python3
-Rectangle = __import__('4-rectangle').Rectangle
+from_json_string = __import__('6-from_json_string').from_json_string
 
-my_rectangle = Rectangle(2, 4)
-print(str(my_rectangle))
-print("--")
-print(my_rectangle)
-print("--")
-print(repr(my_rectangle))
-print("--")
-print(hex(id(my_rectangle)))
-print("--")
+s_my_list = "[1, 2, 3]"
+my_list = from_json_string(s_my_list)
+print(my_list)
+print(type(my_list))
 
-# create new instance based on representation
-new_rectangle = eval(repr(my_rectangle))
-print(str(new_rectangle))
-print("--")
-print(new_rectangle)
-print("--")
-print(repr(new_rectangle))
-print("--")
-print(hex(id(new_rectangle)))
-print("--")
+s_my_dict = """
+{"is_active": true, "info": {"age": 36, "average": 3.14}, 
+"id": 12, "name": "John", "places": ["San Francisco", "Tokyo"]}
+"""
+my_dict = from_json_string(s_my_dict)
+print(my_dict)
+print(type(my_dict))
 
-print(new_rectangle is my_rectangle)
-print(type(new_rectangle) is type(my_rectangle))
+try:
+    s_my_dict = """
+    {"is_active": true, 12 }
+    """
+    my_dict = from_json_string(s_my_dict)
+    print(my_dict)
+    print(type(my_dict))
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
