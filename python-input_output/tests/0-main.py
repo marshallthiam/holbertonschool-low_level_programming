@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-Rectangle = __import__('0-rectangle').Rectangle
+read_file = __import__('0-read_file').read_file
 
-my_rectangle = Rectangle()
-print(type(my_rectangle))
-print(my_rectangle.__dict__)
+read_file("my_file_0.txt")
