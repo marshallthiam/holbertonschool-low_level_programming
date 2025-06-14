@@ -1,18 +1,12 @@
 #!/usr/bin/python3
-Rectangle = __import__('8-rectangle').Rectangle
+MyClass = __import__('10-my_class').MyClass
+class_to_json = __import__('10-class_to_json').class_to_json
 
-my_rectangle_1 = Rectangle(8, 4)
-my_rectangle_2 = Rectangle(2, 3)
+m = MyClass("John")
+m.number = 89
+print(type(m))
+print(m)
 
-if my_rectangle_1 is Rectangle.bigger_or_equal(my_rectangle_1, my_rectangle_2):
-    print("my_rectangle_1 is bigger or equal to my_rectangle_2")
-else:
-    print("my_rectangle_2 is bigger than my_rectangle_1")
-
-
-my_rectangle_2.width = 10
-my_rectangle_2.height = 5
-if my_rectangle_1 is Rectangle.bigger_or_equal(my_rectangle_1, my_rectangle_2):
-    print("my_rectangle_1 is bigger or equal to my_rectangle_2")
-else:
-    print("my_rectangle_2 is bigger than my_rectangle_1")
+mj = class_to_json(m)
+print(type(mj))
+print(mj)
