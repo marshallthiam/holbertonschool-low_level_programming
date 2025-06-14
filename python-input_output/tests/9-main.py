@@ -1,6 +1,12 @@
 #!/usr/bin/python3
-Rectangle = __import__('9-rectangle').Rectangle
+Student = __import__('11-student').Student
 
-my_square = Rectangle.square(5)
-print("Area: {} - Perimeter: {}".format(my_square.area(), my_square.perimeter()))
-print(my_square)
+students = [Student("John", "Doe", 23), Student("Bob", "Dylan", 27)]
+
+for student in students:
+    j_student = student.to_json()
+    print(type(j_student))
+    print(j_student['first_name'])
+    print(type(j_student['first_name']))
+    print(j_student['age'])
+    print(type(j_student['age']))
