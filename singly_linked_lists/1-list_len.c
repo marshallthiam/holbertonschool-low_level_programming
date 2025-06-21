@@ -1,26 +1,32 @@
-/*
- * File: 1-list_len.c
- * Auth: Brennan D Baraban
- */
-
-#include "lists.h"
+#include <stddef.h>  // For size_t
 
 /**
- * list_len - Finds the number of elements in
- *            a linked list_t list.
- * @h: The linked list_t list.
+ * struct list_t - Linked list node structure
+ * @str: String data
+ * @len: Length of the string
+ * @next: Pointer to the next node
+ */
+typedef struct list_t
+{
+    char *str;
+    unsigned int len;
+    struct list_t *next;
+} list_t;
+
+/**
+ * list_len - Returns the number of elements in a linked list_t list
+ * @h: Pointer to the first node of the list
  *
- * Return: The number of elements in h.
+ * Return: Number of nodes in the list
  */
 size_t list_len(const list_t *h)
 {
-	size_t elements = 0;
+    size_t count = 0;
 
-	while (h)
-	{
-		elements++;
-		h = h->next;
-	}
-
-	return (elements);
+    while (h != NULL)
+    {
+        count++;
+        h = h->next;
+    }
+    return count;
 }
