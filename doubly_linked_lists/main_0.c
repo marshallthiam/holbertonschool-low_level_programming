@@ -1,7 +1,7 @@
+#include <list.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include "lists.h"
 
 /**
  * main - test la fonction print_dlistint
@@ -22,4 +22,3 @@ int main(void)
     printf("Il y a %lu éléments dans la liste.\n", n);
     free(new);
     return (EXIT_SUCCESS);
-}
