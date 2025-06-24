@@ -5,9 +5,11 @@
 
 /**
  * struct dlistint_s - Doubly linked list node
- * @n: Integer value
- * @prev: Points to the previous node
- * @next: Points to the next node
+ * @n: Integer
+ * @prev: Pointer to the previous node
+ * @next: Pointer to the next node
+ *
+ * Description: Node structure for doubly linked list
  */
 typedef struct dlistint_s
 {
