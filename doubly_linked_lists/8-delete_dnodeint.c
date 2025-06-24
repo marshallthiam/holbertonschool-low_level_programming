@@ -48,7 +48,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
     return (1);
 }
 
-⚙️ Header (lists.h) should contain:
 
 #ifndef LISTS_H
 #define LISTS_H
